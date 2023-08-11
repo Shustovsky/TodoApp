@@ -8,13 +8,13 @@ type TodoListType = {
 
 export function TodoList({ todos, removeTodo }: TodoListType) {
   return (
-    <div className={styles.todoList}>
+    <div className={styles.todoListContainer}>
       {todos.length ? (
         todos.map((todo, index) => (
           <Todo key={index} todo={todo} id={index} removeTodo={removeTodo} />
         ))
       ) : (
-        <h1>Todo list is empty</h1>
+        <h2>Todo list is empty</h2>
       )}
     </div>
   );

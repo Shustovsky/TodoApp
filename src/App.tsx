@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TodoForm } from './components/Todos/TodoForm.tsx';
 import { TodoList } from './components/Todos/TodoList.tsx';
+import './App.scss';
 
 export function App() {
   const [todos, setTodos] = useState<string[]>([]);
@@ -13,10 +14,10 @@ export function App() {
   };
 
   return (
-    <>
+    <div className="App">
       <h1>Todo App</h1>
       <TodoForm addTodo={addTodoHandler} />
       <TodoList todos={todos} removeTodo={removeTodoHandler} />
-    </>
+    </div>
   );
 }
