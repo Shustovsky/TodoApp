@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './TodoForm.module.scss';
+import { Button } from '../UI/Button.tsx';
 
 type TodoFormType = {
   addTodo: (e: string) => void;
@@ -23,7 +24,9 @@ export function TodoForm({ addTodo }: TodoFormType) {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <Button title="Submit" type="submit">
+          Submit
+        </Button>
       </form>
     </div>
   );
