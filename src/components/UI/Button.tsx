@@ -5,14 +5,14 @@ type ButtonType = {
   onClick?: () => void;
   children: React.ReactNode;
   title: string;
-  disable?: boolean;
+  disabled?: boolean;
   type?: 'button' | 'submit' | 'reset';
 };
 
 export function Button(props: ButtonType) {
-  const { children, disable = false } = props;
+  const { children, disabled = false } = props;
   return (
-    <button {...props} className={styles.btn} disabled={disable}>
+    <button {...props} className={styles.btn} disabled={disabled}>
       {children}
     </button>
   );

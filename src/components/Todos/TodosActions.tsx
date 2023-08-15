@@ -21,7 +21,7 @@ export function TodosActions({
       <Button
         onClick={removeCompletedTodos}
         title="Clear completed Todos"
-        disable={!completedTodosExist}
+        disabled={!completedTodosExist}
       >
         <RiRefreshLine />
       </Button>
